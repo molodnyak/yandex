@@ -95,7 +95,7 @@ legend("topleft", legend=c("Upper","Forecast","Lower"), title="95% level", fill=
 axis(1, at=results$Date, labels=format(results$Date, "%b%Y"), las=2)
 text(results$Date, results$pmeanYandex, results$pmeanYandex, cex=0.6, pos=1, offset=0.5)
 
-##Таблица результатов для 2018 года
+##Таблицы результатов для 2018 года
 
 ###Chrome
 View(results[results$Date >= '2018-01-01',c('Date', 'plowerChrome', 'pmeanChrome', 'pupperChrome')])
