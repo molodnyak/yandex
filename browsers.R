@@ -6,7 +6,8 @@
 broid <- matrix(data=paste0("id=", c(1:60)), nrow=10, ncol=6)
 yandex <- data.frame("Date"=seq(as.Date("2015-01-01"), length=31, by="1 month")-1)
 for(i in 1:6){
-  yandex <- cbind(yandex, read.table(paste0("http://www.liveinternet.ru/stat/ru/browsers.csv?slice=ru;", paste(broid[,i], collapse = ';'), ";period=month;graph=csv"), header = T, sep = ";", encoding = "UTF-8", stringsAsFactors = F)[,-1])
+  yandex <- cbind(yandex, read.table(paste0("http://www.liveinternet.ru/stat/ru/browsers.csv?slice=ru;", paste(broid[,i], collapse = ';'), 
+                                            ";period=month;graph=csv"), header = T, sep = ";", encoding = "UTF-8", stringsAsFactors = F)[,-1])
 }
 
 ##Основные браузеры
